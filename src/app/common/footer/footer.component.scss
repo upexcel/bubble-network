@@ -1,0 +1,39 @@
+ion-buttons {
+  width: 100%;
+  display: flex;
+  justify-content: space-around;
+
+  button {
+    color: #666666;
+    background-color: white;
+    pointer-events: none;
+  }
+}
+.bubble-logo {
+  width: 50px;
+  height: 50px;
+
+  background: url(../../../assets/bubble-logo.png) no-repeat;
+  background-size: contain;
+}
+.profile-bubble {
+
+  .profile-image {
+    height: 30px !important;
+    box-shadow: -1px -1px 2px 2px #bdc1db inset !important;
+    background: url(../../../assets/profile-picture.jpg);
+  }
+}
+ion-buttons {
+  pointer-events: all !important;
+}
+ion-icon, .profile-bubble {
+  width: 30px;
+  height: 30px;
+  margin-left: auto;
+  margin-right: auto;
+}
+.ball.bubble::after,
+.ball.bubble::before {
+  content: none !important;
+}

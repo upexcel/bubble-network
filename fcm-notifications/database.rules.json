@@ -1,0 +1,18 @@
+{
+  "rules": {
+    "user": {
+      ".read": true,
+      "$uid": {
+        ".write": "auth.uid === $uid"
+      }
+    },
+    "follow": {
+      ".read": true,
+      ".write": true
+    },
+    "friends": {
+      ".read": true,
+      ".write": true
+    }
+  }
+}

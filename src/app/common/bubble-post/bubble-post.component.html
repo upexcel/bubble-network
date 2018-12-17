@@ -1,0 +1,29 @@
+<ion-card class="bubble-post">
+    <div [ngClass]="{'image-space': true, 'image-closed': sidebarOpen}">
+        <ion-icon name="close" (click)="close()" class="close-icon"></ion-icon>
+        <div class="profile-bubble ball bubble">
+            <div class="profile-image" [ngStyle]="{'background-image': 'url(' + bubblePostData['url'] + ')'}"></div>
+        </div>
+        <div class="icons">
+            <ion-icon name="heart" (click)="likeClick()" [color]="bubblePostLikedByMe ?  'danger' : 'primary'"></ion-icon>
+            <ion-icon name="text" (click)="toggleSidebar()" color="primary"></ion-icon>
+            <div class="likes">{{bubblePostData['likes'].length}}&nbsp; likes</div>
+        </div>
+    </div>
+    <div [ngClass]="{'side-open': sidebarOpen, 'side-content': true}">
+
+        <ion-card-content>
+            <div>
+                <b>{{bubblePostData['author']}}</b>&nbsp;{{bubblePostData['description']}}</div>
+            <div>
+                <div *ngFor="let comment of bubblePostData['comments']">
+                    <b>{{comment.user}}</b>&nbsp;{{comment.text}}</div>
+            </div>
+            <div class="comment">
+                <ion-label color="primary">Comment</ion-label>
+                <ion-textarea #commentArea placeholder="Enter your comment here..." [(ngModel)]="newComment" maxlength="2000"></ion-textarea>
+                <ion-icon (click)="comment()" name="leaf" [color]="newComment.length ? 'primary' : null"></ion-icon>
+            </div>
+        </ion-card-content>
+    </div>
+</ion-card>

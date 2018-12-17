@@ -1,0 +1,33 @@
+<ion-buttons>
+  <a (click)="navigate('/user')">
+    <button icon-start>
+      <div class="profile-bubble ball bubble">
+        <div class="profile-image"></div>
+      </div>
+    </button>
+  </a>
+  <button ion-button
+    icon-start>
+    <ion-icon name="cloud-upload"></ion-icon>
+    &nbsp;
+  </button>
+  <a (click)="navigate('/main')">
+    <button icon-start>
+      <div class="bubble-logo"></div>
+    </button>
+  </a>
+  <a (click)="navigate('/newBubblePost')">
+    <button ion-button
+      icon-start>
+      <ion-icon name="add"></ion-icon>
+      &nbsp;
+    </button>
+  </a>
+  <a (click)="navigate('/chats')">
+    <button ion-button
+      icon-start>
+      <ion-icon name="chatbubbles"></ion-icon>
+      &nbsp;
+    </button>
+  </a>
+</ion-buttons>

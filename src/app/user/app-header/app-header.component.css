@@ -1,0 +1,74 @@
+.profile-container {
+  position: relative;
+}
+
+.profile-header {
+  margin-bottom: 40px;
+  height: 15vh;
+  background: url(../../../assets/colored-brick-wall.jpg) repeat;
+  background-size: cover;
+}
+
+.profile-bubble {
+  position: absolute;
+  bottom: -35px;
+  left: 15px;
+}
+
+.profile-bubble .profile-image {
+  background: url(../../../assets/profile-picture.jpg);
+  background-size: cover !important;
+}
+
+.user-site {
+  padding: 0 20px;
+  text-align: right;
+  color: #00a2ff;
+  font-style: italic;
+}
+
+.follow {
+  float: right;
+  margin-top: -30px;
+}
+
+.follow button:first-child {
+  margin-right: 5px;
+}
+
+.follow .welcome-button {
+  height: 4vh;
+  width: 25vw;
+  margin-right: 5px;
+}
+
+ion-toolbar {
+  height: 45px;
+}
+
+.header {
+  margin-top: -5px;
+  width: 100%;
+  height: 45px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.header button {
+  background: transparent;
+  outline: none;
+}
+
+.header .bubble-logo {
+  width: 50px;
+  height: 50px;
+  background: url(../../../assets/bubble-logo.png) no-repeat;
+  background-size: contain;
+}
+
+.header ion-icon {
+  width: 30px;
+  height: 30px;
+}

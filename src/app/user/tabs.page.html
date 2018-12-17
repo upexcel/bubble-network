@@ -1,0 +1,22 @@
+<app-header></app-header>
+<ion-tabs tabbarPlacement="top">
+  <ion-tab label="Profile" href="/user/(profile:profile)">
+    <ion-router-outlet name="profile"></ion-router-outlet>
+  </ion-tab>
+  <!-- <ion-tab label="Friend Posts" href="/user/(friend-posts:friend-posts)">
+    <ion-router-outlet name="friend-posts"></ion-router-outlet>
+  </ion-tab> -->
+  <ion-tab label="Friends" href="/user/(friends:friends)">
+    <ion-router-outlet name="friends"></ion-router-outlet>
+  </ion-tab>
+  <ion-tab label="Activity" href="/user/(activity:activity)">
+    <ion-router-outlet name="activity"></ion-router-outlet>
+  </ion-tab>
+  <ion-tab label="Run Ad" href="/user/(sponsor-ad:sponsor-ad)">
+    <ion-router-outlet name="sponsor-ad"></ion-router-outlet>
+  </ion-tab>
+  <ion-tab label="Settings" href="/user/(settings:settings)">
+    <ion-router-outlet name="settings"></ion-router-outlet>
+  </ion-tab>
+</ion-tabs>
+<app-footer></app-footer>

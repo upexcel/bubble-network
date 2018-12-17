@@ -1,0 +1,35 @@
+<ion-header>
+  <ion-toolbar>
+    <div class="header">
+      <ion-icon name="menu" (click)="openMenu()"></ion-icon>
+      <a (click)="navigate('/main')">
+        <button icon-start>
+          <div class="bubble-logo"></div>
+        </button>
+      </a>
+      <a (click)="navigate('/live-video')">
+        <ion-icon name="videocam" ios="ios-videocam"></ion-icon>
+      </a>
+    </div>
+  </ion-toolbar>
+</ion-header>
+
+<div class="profile-container">
+  <div class="profile-header" *ngIf="!user || !user.bannerImage"></div>
+  <div class="profile-header" *ngIf="user && user.bannerImage" [ngStyle]="{'background-image': 'url(' + user.bannerImage + ')'}"></div>
+  <div class="profile-bubble ball bubble">
+    <div class="profile-image" *ngIf="!user || !user.profileImage"></div>
+    <div class="profile-image" *ngIf="user && user.profileImage" [ngStyle]="{'background-image': 'url(' + user.profileImage + ')'}"></div>
+  </div>
+</div>
+<div class="follow">
+  <div class="user-site">{{user ? user.websiteLink : ''}}</div>
+  <button class="welcome-button" (click)="navigate('/followers')">
+    Followers
+    <div>{{followerCount}}</div>
+  </button>
+  <button class="welcome-button" (click)="navigate('/following')">
+    Following
+    <div>{{followingCount}}</div>
+  </button>
+</div>

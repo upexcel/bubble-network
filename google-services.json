@@ -1,0 +1,42 @@
+{
+  "project_info": {
+    "project_number": "173384717347",
+    "firebase_url": "https://bubbleflix-edc8d.firebaseio.com",
+    "project_id": "bubbleflix-edc8d",
+    "storage_bucket": "bubbleflix-edc8d.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:173384717347:android:85c85de3fb876688",
+        "android_client_info": {
+          "package_name": "io.bubble.bubbleNetwork"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "173384717347-bhaj66qnqv94jvfsusthablkr3aafieg.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCVMoRkDDvapW7EVYs0SXVXP8HGtMz4OJw"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 1,
+          "other_platform_oauth_client": []
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

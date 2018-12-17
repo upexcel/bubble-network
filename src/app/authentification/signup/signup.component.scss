@@ -1,0 +1,22 @@
+.user-image {
+  width: 50vh;
+  height: 50vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  img {
+    height: 70%;
+    margin-top: 10%;
+  }
+}
+
+.ion-form {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+ion-datetime, ion-select {
+  padding: 8px 8px 8px 0 !important;
+}

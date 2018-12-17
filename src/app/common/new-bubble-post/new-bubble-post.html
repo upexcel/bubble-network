@@ -1,0 +1,24 @@
+<ion-header>
+    <ion-toolbar>
+        <ion-buttons slot="start">
+            <ion-back-button>
+            </ion-back-button>
+        </ion-buttons>
+        <ion-title>New Post</ion-title>
+        <ion-buttons slot="end">
+            <ion-button (click)="close()">
+                <ion-icon name="close"></ion-icon>
+            </ion-button>
+        </ion-buttons>
+    </ion-toolbar>
+</ion-header>
+
+<ion-content padding>
+    <div class="hop-photo-select" tappable (click)="onClick()">
+        <img *ngIf="image" class="image-loaded" [src]="image" />
+        <ion-icon name="md-camera" color="primary"></ion-icon>
+    </div>
+    <p class="title">Description * </p>
+    <textarea rows="5" [(ngModel)]="description"></textarea>
+    <ion-button color="secondary" expand="block" (click)="post()" [disabled]="!description || !image">Post</ion-button>
+</ion-content>

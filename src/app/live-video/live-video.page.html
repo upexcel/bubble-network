@@ -1,0 +1,24 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-back-button>
+      </ion-back-button>
+    </ion-buttons>
+    <ion-title>Live Video</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content padding>
+  <ion-text class="text-center"
+    color="primary">
+    <h1> Here you can start live video stream.</h1>
+  </ion-text>
+  <ion-fab vertical="bottom"
+    horizontal="center"
+    slot="fixed">
+    <ion-fab-button color="danger"
+      (click)="toggleRecording()">
+      <ion-icon [name]="mainButton"></ion-icon>
+    </ion-fab-button>
+  </ion-fab>
+</ion-content>

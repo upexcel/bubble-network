@@ -1,0 +1,39 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>
+      {{chatRoomData?.roomName}}
+    </ion-title>
+    <ion-buttons slot="end">
+      <ion-avatar>
+        <img src="assets/profile-picture.jpg" />
+      </ion-avatar>
+    </ion-buttons>
+    <ion-buttons slot="start">
+      <ion-back-button>
+      </ion-back-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+<ion-content>
+  <ion-list lines="none">
+    <ion-item *ngFor="let message of messages ;trackBy: trackByFn" lines="none">
+      <ion-avatar slot="start">
+        <img [src]="message.user.profileImage ? message.user.profileImage : 'assets/profile-picture.jpg'" />
+      </ion-avatar>
+      <ion-label>
+        <h2>{{message.user['firstName']}} {{message.user['lastName']}}</h2>
+        <p>{{message.message}}</p>
+      </ion-label>
+      <sup><small>{{message.time | date: 'short'}}</small></sup>
+    </ion-item>
+  </ion-list>
+</ion-content>
+
+<ion-footer>
+  <ion-grid>
+    <ion-row>
+      <ion-input [autofocus]="true" (keypress)="eventHandler($event.keyCode)" type="text" placeholder="Type a message" name="message" [(ngModel)]="message"></ion-input>
+      <ion-icon name="paper-plane" (click)="sendMessage()"></ion-icon>
+    </ion-row>
+  </ion-grid>
+</ion-footer>

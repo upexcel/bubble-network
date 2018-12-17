@@ -1,0 +1,22 @@
+<!-- <ion-app>
+  <ion-router-outlet></ion-router-outlet>
+</ion-app> -->
+
+<ion-app>
+  <ion-split-pane when="xl">
+    <ion-menu type="overlay">
+      <ion-header>
+        <ion-toolbar color="default">
+          <ion-title>Menu</ion-title>
+        </ion-toolbar>
+      </ion-header>
+      <ion-content padding>
+        <!-- <ion-button expand="block" (click)="signOut()">
+          Logout
+          <ion-icon name="exit"></ion-icon>
+        </ion-button> -->
+      </ion-content>
+    </ion-menu>
+    <ion-router-outlet main></ion-router-outlet>
+  </ion-split-pane>
+</ion-app>

@@ -1,0 +1,28 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-back-button>
+      </ion-back-button>
+    </ion-buttons>
+    <ion-title>Users</ion-title>
+  </ion-toolbar>
+</ion-header>
+<ion-content>
+  <ion-searchbar placeholder="Search user" (ionCancel)="searchString = ''" (ionClear)="searchString = ''"
+    showCancelButton="true" cancelButtonText="Cancel" debounce="500" [(ngModel)]="searchString" animated></ion-searchbar>
+  <ion-spinner name="lines-small" *ngIf="loader" class="loading-spinner"></ion-spinner>
+
+  <ion-list>
+    <ion-item *ngFor="let user of users | searchFilter:searchString; let i = index;">
+      <ion-avatar slot="start">
+        <img [src]="user.profileImage ? user.profileImage : 'assets/profile-picture.jpg'" />
+      </ion-avatar>
+      <ion-label>
+        <h2>{{user.username}}</h2>
+        <h3>{{user.firstName}} {{user.lastName}} </h3>
+      </ion-label>
+      <ion-button color="primary" (click)="followUser(user)">{{user.isFollowing ? 'Following' : 'Follow'}}</ion-button>
+      <ion-button color="success" (click)="addFriend(user)">Add Friend</ion-button>
+    </ion-item>
+  </ion-list>
+</ion-content>

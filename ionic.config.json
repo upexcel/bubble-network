@@ -1,0 +1,8 @@
+{
+  "name": "bubble-network",
+  "integrations": {
+    "cordova": {}
+  },
+  "type": "angular",
+  "id": "ac380619"
+}

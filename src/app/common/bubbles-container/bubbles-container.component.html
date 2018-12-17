@@ -1,0 +1,43 @@
+<div class="profile">
+  <div class="bubble-scene"
+    (scroll)="!showedStartToast ? onScroll($event) : null">
+    <div *ngFor="let bubble of allBubbles; let i = index;"
+      class="scene-item beaker"
+      [ngStyle]="{'animation-delay': bubble.animationDelay}">
+      <div (click)="openBubble(bubble)"
+        [ngClass]="'profile-bubble ball bubble circle'"
+        [ngStyle]="{'animation-delay': bubble.animationDelay}">
+        <div class="profile-image"
+          [ngStyle]="{'background-image': 'url(' + bubble.url + ')', 'animation-delay': bubble.animationDelay}"></div>
+        <div *ngIf="bubble.redBorderAnimation"
+          class="red-border"></div>
+        <div *ngIf="bubble.starsAnimation"
+          class='stars-container'>
+          <div class="star-five"></div>
+          <div class="star-five"></div>
+          <div class="star-five"></div>
+          <div class="star-five"></div>
+          <div class="star-five"></div>
+          <div class="star-five"></div>
+          <div class="star-five"></div>
+          <div class="star-five"></div>
+        </div>
+        <div *ngIf="bubble.raysAnimation"
+          class='ray_box'>
+          <div class="ray ray1"></div>
+          <div class="ray ray2"></div>
+          <div class="ray ray3"></div>
+          <div class="ray ray4"></div>
+          <div class="ray ray5"></div>
+          <div class="ray ray6"></div>
+          <div class="ray ray7"></div>
+          <div class="ray ray8"></div>
+        </div>
+        <div *ngIf="bubble.coloredLinesAnimation"
+          class="loader-wrapper">
+          <div class="loader"></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

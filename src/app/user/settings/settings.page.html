@@ -1,0 +1,77 @@
+<ion-content padding>
+  <img src={{user.profileImage}}
+  *ngIf="user.profileImage"
+    alt="Ionic File"
+    padding/>
+  <div class="flex-center">
+    <button class="welcome-button"
+      (click)="getImage()">Change User Image</button>
+    <button class="welcome-button"
+      (click)="changeBanner()">Change Banner</button>
+    <button class="welcome-button"
+      (click)="openChangeBubbles()">Change Bubbles</button>
+    <button class="welcome-button"
+      (click)="signOut()">Log Out</button>
+  </div>
+  <ion-item>
+    <ion-label position="floating">First Name</ion-label>
+    <ion-input type="text"
+      [(ngModel)]="user.firstName"
+      placeholder="First Name"></ion-input>
+  </ion-item>
+  <ion-item>
+    <ion-label position="floating">Last Name</ion-label>
+    <ion-input type="text"
+      [(ngModel)]="user.lastName"
+      placeholder="Last Name"></ion-input>
+  </ion-item>
+  <ion-item>
+    <ion-label position="floating">Username</ion-label>
+    <ion-input type="text"
+      [(ngModel)]="user.username"
+      placeholder="Username"></ion-input>
+  </ion-item>
+  <ion-item>
+    <ion-label position="floating">Email</ion-label>
+    <ion-input type="text"
+      [(ngModel)]="user.email"
+      placeholder="Email" readonly></ion-input>
+  </ion-item>
+  <ion-item>
+    <ion-label position="floating">Password</ion-label>
+    <ion-input type="password"
+      [(ngModel)]="user.password"
+      placeholder="Password" readonly></ion-input>
+  </ion-item>
+  <ion-item>
+    <ion-label position="floating">Birthday</ion-label>
+    <ion-datetime display-format="MMM DD, YYYY"
+      placeholder="Select date"
+      [(ngModel)]="user.birthday"></ion-datetime>
+  </ion-item>
+  <ion-item>
+    <ion-label position="floating">Gender</ion-label>
+    <ion-select placeholder="Select Gender"
+      [(ngModel)]="user.gender">
+      <ion-select-option value="f">Female</ion-select-option>
+      <ion-select-option value="m">Male</ion-select-option>
+      <ion-select-option value="other">Other</ion-select-option>
+      <ion-select-option value="">Won't say</ion-select-option>
+    </ion-select>
+  </ion-item>
+  <ion-item>
+    <ion-label position="floating">Country</ion-label>
+    <ion-input type="text"
+      [(ngModel)]="user.country"
+      placeholder="Country"></ion-input>
+  </ion-item>
+  <ion-item>
+    <ion-label position="floating">Website Link</ion-label>
+    <ion-input type="text"
+      [(ngModel)]="user.websiteLink"
+      placeholder="Website Link"></ion-input>
+  </ion-item>
+  <div class="flex-center">
+    <button class="welcome-button" (click)="updateUser()">Save Changes</button>
+  </div>
+</ion-content>

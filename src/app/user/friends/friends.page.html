@@ -1,0 +1,24 @@
+<ion-content>
+  <!-- <button class="welcome-button" (click)="navigate('/allbubblier')">
+    All Users
+  </button> -->
+
+  <ion-searchbar placeholder="Search friend" (ionCancel)="searchString = ''" (ionClear)="searchString = ''"
+    showCancelButton="true" cancelButtonText="Cancel" debounce="500" [(ngModel)]="searchString" animated></ion-searchbar>
+  <ion-spinner name="lines-small" *ngIf="loader" class="loading-spinner"></ion-spinner>
+  <ion-list>
+    <ion-item *ngFor="let friend of friends | searchFilter:searchString; let i = index;">
+      <ion-avatar slot="start">
+        <img [src]="friend.profileImage ? friend.profileImage : 'assets/profile-picture.jpg'" />
+      </ion-avatar>
+      <ion-label>
+        <h2>{{friend.username}}</h2>
+        <h3>{{friend.firstName}} {{friend.lastName}} </h3>
+      </ion-label>
+      <ion-icon (click)="presentActionSheet(friend)" name="more"></ion-icon>
+    </ion-item>
+  </ion-list>
+  <ion-infinite-scroll (ionInfinite)="doInfinite($event)">
+    <ion-infinite-scroll-content></ion-infinite-scroll-content>
+  </ion-infinite-scroll>
+</ion-content>
